@@ -15,6 +15,10 @@ Wrap the ScanningEffect widget around your widget
 @override
 Widget build(BuildContext context) {
   return ScanningEffect(
+    scanningColor: Colors.red,
+    borderLineColor: Colors.green,
+    delay: Duration(seconds: 1),
+    duration: Duration(seconds: 2),
     child: Container(
       child: SizedBox(),
     ),
