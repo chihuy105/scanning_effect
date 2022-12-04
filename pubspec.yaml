@@ -1,9 +1,9 @@
 name: scanning_effect
 description: Scanning effect for wrapping around a camera view
 
-version: 1.0.0
+version: 1.0.1
 homepage: https://kyo-huu.me
-publish_to: https://github.com/chihuy105/scanning_effect
+#publish_to: https://github.com/chihuy105/scanning_effect
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
