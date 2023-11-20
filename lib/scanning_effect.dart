@@ -56,7 +56,7 @@ class ScanningEffect extends StatefulWidget {
 class _ScanningEffectState extends State<ScanningEffect>
     with SingleTickerProviderStateMixin {
   late final AnimationController _animationController;
-  late final Timer _timer;
+  Timer? _timer;
   @override
   void initState() {
     _animationController = AnimationController(
@@ -106,7 +106,7 @@ class _ScanningEffectState extends State<ScanningEffect>
 
   @override
   void dispose() {
-    _timer.cancel();
+    _timer?.cancel();
     _animationController.dispose();
     super.dispose();
   }
