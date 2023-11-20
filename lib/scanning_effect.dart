@@ -1,6 +1,8 @@
 // Thank you to the author of the original post that this widget was build base on it.
 // https://medium.com/@webianks/scanning-animation-in-flutter-99fb26aabbb7
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:scanning_effect/scanner_animation.dart';
 import 'package:scanning_effect/scanner_border_painter.dart';
@@ -54,7 +56,7 @@ class ScanningEffect extends StatefulWidget {
 class _ScanningEffectState extends State<ScanningEffect>
     with SingleTickerProviderStateMixin {
   late final AnimationController _animationController;
-
+  Timer? _timer;
   @override
   void initState() {
     _animationController = AnimationController(
@@ -65,14 +67,11 @@ class _ScanningEffectState extends State<ScanningEffect>
     _animationController
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          Future.delayed(
-            widget.delay,
-            () {
-              _animationController
-                ..reset()
-                ..forward(from: 0);
-            },
-          );
+          _timer = Timer(widget.delay, () {
+            _animationController
+              ..reset()
+              ..forward(from: 0);
+          });
         }
       })
       ..forward(from: 0);
@@ -107,6 +106,7 @@ class _ScanningEffectState extends State<ScanningEffect>
 
   @override
   void dispose() {
+    _timer?.cancel();
     _animationController.dispose();
     super.dispose();
   }
