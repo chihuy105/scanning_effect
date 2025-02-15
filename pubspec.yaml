@@ -1,7 +1,7 @@
 name: scanning_effect
 description: Scanning effect for wrapping around a camera view
 
-version: 1.0.5
+version: 1.0.6
 homepage:  https://github.com/chihuy105/scanning_effect
 #publish_to: https://github.com/chihuy105/scanning_effect
 
@@ -12,7 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  permission_handler: ^10.0.0
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
@@ -23,4 +23,3 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
-flutter:
