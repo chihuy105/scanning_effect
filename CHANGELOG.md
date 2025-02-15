@@ -1,4 +1,4 @@
-## [1.0.5]
+## [1.0.6]
 
 - Update dependencies and permission_handler. By: @cerberodev
 
