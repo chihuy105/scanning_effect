@@ -1,5 +1,9 @@
 ## [1.0.5]
 
+- Update dependencies and permission_handler. By: @cerberodev
+
+## [1.0.5]
+
 - Fix controller dispose
 
 ## [1.0.1]
