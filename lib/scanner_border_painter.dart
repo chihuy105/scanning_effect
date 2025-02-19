@@ -46,7 +46,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_0.close();
 
     Paint paint0Fill = Paint()..style = PaintingStyle.fill;
-    paint0Fill.color = color.withOpacity(1.0);
+    paint0Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
@@ -86,7 +86,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_1.close();
 
     Paint paint1Fill = Paint()..style = PaintingStyle.fill;
-    paint1Fill.color = color.withOpacity(1.0);
+    paint1Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_1, paint1Fill);
 
     Path path_2 = Path();
@@ -126,7 +126,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_2.close();
 
     Paint paint2Fill = Paint()..style = PaintingStyle.fill;
-    paint2Fill.color = color.withOpacity(1.0);
+    paint2Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_2, paint2Fill);
 
     Path path_3 = Path();
@@ -166,7 +166,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_3.close();
 
     Paint paint3Fill = Paint()..style = PaintingStyle.fill;
-    paint3Fill.color = color.withOpacity(1.0);
+    paint3Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_3, paint3Fill);
 
     Path path_4 = Path();
@@ -206,7 +206,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_4.close();
 
     Paint paint4Fill = Paint()..style = PaintingStyle.fill;
-    paint4Fill.color = color.withOpacity(1.0);
+    paint4Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_4, paint4Fill);
 
     Path path_5 = Path();
@@ -246,7 +246,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_5.close();
 
     Paint paint5Fill = Paint()..style = PaintingStyle.fill;
-    paint5Fill.color = color.withOpacity(1.0);
+    paint5Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_5, paint5Fill);
 
     Path path_6 = Path();
@@ -286,7 +286,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_6.close();
 
     Paint paint6Fill = Paint()..style = PaintingStyle.fill;
-    paint6Fill.color = color.withOpacity(1.0);
+    paint6Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_6, paint6Fill);
 
     Path path_7 = Path();
@@ -326,7 +326,7 @@ class ScannerBorderPainter extends CustomPainter {
     path_7.close();
 
     Paint paint7Fill = Paint()..style = PaintingStyle.fill;
-    paint7Fill.color = color.withOpacity(1.0);
+    paint7Fill.color = color.withValues(alpha: 1.0);
     canvas.drawPath(path_7, paint7Fill);
   }
 
