@@ -97,7 +97,7 @@ class _ScanningEffectState extends State<ScanningEffect>
           Future.delayed(
             widget.delay,
             () {
-              if(mounted) {
+              if (mounted) {
                 _animationController
                   ..reset()
                   ..forward(from: 0);

@@ -19,10 +19,12 @@ class ScannerAnimation extends AnimatedWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constrains) {
-        final scanningGradientHeight = constrains.maxHeight * scanningHeightOffset;
+        final scanningGradientHeight =
+            constrains.maxHeight * scanningHeightOffset;
         final animation = listenable as Animation<double>;
         final value = animation.value;
-        final scorePosition = (value * constrains.maxHeight * 2) - (constrains.maxHeight);
+        final scorePosition =
+            (value * constrains.maxHeight * 2) - (constrains.maxHeight);
 
         final color = scanningColor ?? Colors.blue;
 
