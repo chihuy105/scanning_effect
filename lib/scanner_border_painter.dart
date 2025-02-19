@@ -21,9 +21,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_0.lineTo(size.width * 0.04968944, size.height * 0.05891879);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_0, paint_0_fill);
+    Paint paint0Fill = Paint()..style = PaintingStyle.fill;
+    paint0Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
     path_1.moveTo(size.width * 0.05745342, size.height * 0.3362452);
@@ -37,9 +37,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_1.lineTo(size.width * 0.05745342, size.height * 0.3362452);
     path_1.close();
 
-    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_1, paint_1_fill);
+    Paint paint1Fill = Paint()..style = PaintingStyle.fill;
+    paint1Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_1, paint1Fill);
 
     Path path_2 = Path();
     path_2.moveTo(size.width * 0.9487174, size.height * 0.9380096);
@@ -53,9 +53,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_2.lineTo(size.width * 0.9487174, size.height * 0.9380096);
     path_2.close();
 
-    Paint paint_2_fill = Paint()..style = PaintingStyle.fill;
-    paint_2_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_2, paint_2_fill);
+    Paint paint2Fill = Paint()..style = PaintingStyle.fill;
+    paint2Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_2, paint2Fill);
 
     Path path_3 = Path();
     path_3.moveTo(size.width * 0.9409534, size.height * 0.6606847);
@@ -69,9 +69,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_3.lineTo(size.width * 0.9409534, size.height * 0.6606847);
     path_3.close();
 
-    Paint paint_3_fill = Paint()..style = PaintingStyle.fill;
-    paint_3_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_3, paint_3_fill);
+    Paint paint3Fill = Paint()..style = PaintingStyle.fill;
+    paint3Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_3, paint3Fill);
 
     Path path_4 = Path();
     path_4.moveTo(size.width * 0.05745342, size.height * 0.9459172);
@@ -85,9 +85,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_4.lineTo(size.width * 0.05745342, size.height * 0.9459172);
     path_4.close();
 
-    Paint paint_4_fill = Paint()..style = PaintingStyle.fill;
-    paint_4_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_4, paint_4_fill);
+    Paint paint4Fill = Paint()..style = PaintingStyle.fill;
+    paint4Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_4, paint4Fill);
 
     Path path_5 = Path();
     path_5.moveTo(size.width * 0.3278913, size.height * 0.9379554);
@@ -101,9 +101,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_5.lineTo(size.width * 0.3278913, size.height * 0.9379554);
     path_5.close();
 
-    Paint paint_5_fill = Paint()..style = PaintingStyle.fill;
-    paint_5_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_5, paint_5_fill);
+    Paint paint5Fill = Paint()..style = PaintingStyle.fill;
+    paint5Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_5, paint5Fill);
 
     Path path_6 = Path();
     path_6.moveTo(size.width * 0.9409534, size.height * 0.05101242);
@@ -117,9 +117,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_6.lineTo(size.width * 0.9409534, size.height * 0.05101242);
     path_6.close();
 
-    Paint paint_6_fill = Paint()..style = PaintingStyle.fill;
-    paint_6_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_6, paint_6_fill);
+    Paint paint6Fill = Paint()..style = PaintingStyle.fill;
+    paint6Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_6, paint6Fill);
 
     Path path_7 = Path();
     path_7.moveTo(size.width * 0.6705155, size.height * 0.05897420);
@@ -133,9 +133,9 @@ class ScannerBorderPainter extends CustomPainter {
     path_7.lineTo(size.width * 0.6705155, size.height * 0.05897420);
     path_7.close();
 
-    Paint paint_7_fill = Paint()..style = PaintingStyle.fill;
-    paint_7_fill.color = color.withOpacity(1.0);
-    canvas.drawPath(path_7, paint_7_fill);
+    Paint paint7Fill = Paint()..style = PaintingStyle.fill;
+    paint7Fill.color = color.withOpacity(1.0);
+    canvas.drawPath(path_7, paint7Fill);
   }
 
   @override
