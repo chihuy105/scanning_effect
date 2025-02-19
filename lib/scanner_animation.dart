@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-// The [ScannerAnimation] for drawing scanner animation that moving down.
-// This is controlled by the animation value
+/// The [ScannerAnimation] for drawing scanner animation that moving down.
+/// This is controlled by the animation value
 class ScannerAnimation extends AnimatedWidget {
   const ScannerAnimation({
     super.key,

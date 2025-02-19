@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-// The [ScannerBorderPainter] for drawing a border around the scanning effect
-// You can replace this with any SVG or Widget you want
+/// The [ScannerBorderPainter] for drawing a border around the scanning effect
+/// You can replace this with any SVG or Widget you want
 class ScannerBorderPainter extends CustomPainter {
   ScannerBorderPainter({required this.color});
 
