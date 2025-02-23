@@ -5,8 +5,37 @@ import 'package:flutter/material.dart';
 import 'package:scanning_effect/scanner_animation.dart';
 import 'package:scanning_effect/scanner_border_painter.dart';
 
-/// The [ScanningEffect] is the view where scanner animation
-/// and scanning border line display.
+/// A widget that applies a scanning animation effect over its child.
+///
+/// The [ScanningEffect] widget creates a customizable scanning animation
+/// with an optional border overlay. It uses an [AnimationController] to
+/// control the scanning motion, which continuously repeats with a delay.
+///
+/// The scanning effect is drawn using [ScannerAnimation], while the border
+/// is painted by [ScannerBorderPainter].
+///
+/// Example usage:
+/// ```dart
+/// ScanningEffect(
+///   child: Image.asset('assets/sample.png'),
+///   scanningColor: Colors.green,
+///   borderLineColor: Colors.red,
+/// )
+/// ```
+///
+/// Creates a [ScanningEffect] widget.
+///
+/// [child] is the widget over which the scanning animation is displayed.
+///
+/// [scanningColor] sets the color of the animated scanning line.
+/// [borderLineColor] defines the color of the optional border.
+/// [enableBorder] controls whether the border is displayed.
+/// [scanningHeightOffset] determines the scanning line height as a
+/// percentage of the widget's total height.
+/// [delay] specifies the time between animation cycles.
+/// [duration] sets the total duration of a single animation cycle.
+/// [scanningLinePadding] adjusts the padding around the scanning effect.
+///
 class ScanningEffect extends StatefulWidget {
   const ScanningEffect({
     super.key,
@@ -68,7 +97,7 @@ class _ScanningEffectState extends State<ScanningEffect>
           Future.delayed(
             widget.delay,
             () {
-              if(mounted) {
+              if (mounted) {
                 _animationController
                   ..reset()
                   ..forward(from: 0);
