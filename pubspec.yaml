@@ -1,8 +1,8 @@
 name: scanning_effect
 description: Scanning effect for wrapping around a camera view with customizable borders using CustomPainter.
 
-version: 1.0.6
-homepage:  https://github.com/chihuy105/scanning_effect
+version: 1.0.7
+homepage: https://github.com/chihuy105/scanning_effect
 #publish_to: https://github.com/chihuy105/scanning_effect
 
 environment:
@@ -12,13 +12,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
