@@ -1,3 +1,6 @@
+## [1.0.8]
+
+- Clean pubspec
 ## [1.0.6]
 
 - Update dependencies and permission_handler. By: @cerberodev
