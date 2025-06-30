@@ -1,3 +1,7 @@
+## [1.0.9]
+
+- Add stroke width
+- Add reverse flag
 ## [1.0.8]
 
 - Clean pubspec
