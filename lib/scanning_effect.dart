@@ -35,6 +35,8 @@ import 'package:scanning_effect/scanner_border_painter.dart';
 /// [delay] specifies the time between animation cycles.
 /// [duration] sets the total duration of a single animation cycle.
 /// [scanningLinePadding] adjusts the padding around the scanning effect.
+/// [reverse] controls whether the animation should be reversed.
+/// [borderLineStrokeWidth] defines the width of the border line.
 ///
 class ScanningEffect extends StatefulWidget {
   const ScanningEffect({
@@ -48,6 +50,8 @@ class ScanningEffect extends StatefulWidget {
     this.duration = const Duration(milliseconds: 2800),
     this.scanningLinePadding =
         const EdgeInsets.symmetric(horizontal: 32, vertical: 36),
+    this.reverse = false,
+    this.borderLineStrokeWidth = 4.0,
   });
 
   /// The widget below this widget in the tree.
@@ -75,6 +79,12 @@ class ScanningEffect extends StatefulWidget {
 
   /// Whether to display the border line
   final bool enableBorder;
+
+  /// Whether to reverse the animation
+  final bool reverse;
+
+  /// The width of the border line
+  final double borderLineStrokeWidth;
 
   @override
   State<ScanningEffect> createState() => _ScanningEffectState();
@@ -120,6 +130,7 @@ class _ScanningEffectState extends State<ScanningEffect>
           CustomPaint(
             painter: ScannerBorderPainter(
               color: widget.borderLineColor,
+              borderLineStrokeWidth: widget.borderLineStrokeWidth,
             ),
           ),
         Padding(
@@ -129,6 +140,7 @@ class _ScanningEffectState extends State<ScanningEffect>
               animation: _animationController,
               scanningColor: widget.scanningColor,
               scanningHeightOffset: widget.scanningHeightOffset,
+              reversed: widget.reverse,
             ),
           ),
         ),
