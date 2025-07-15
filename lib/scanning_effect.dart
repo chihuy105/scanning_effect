@@ -99,24 +99,24 @@ class _ScanningEffectState extends State<ScanningEffect>
     _animationController = AnimationController(
       duration: widget.duration,
       vsync: this,
-    );
+    )..repeat(reverse: true);
 
-    _animationController
-      ..addStatusListener((status) {
-        if (status == AnimationStatus.completed) {
-          Future.delayed(
-            widget.delay,
-            () {
-              if (mounted) {
-                _animationController
-                  ..reset()
-                  ..forward(from: 0);
-              }
-            },
-          );
-        }
-      })
-      ..forward(from: 0);
+    // _animationController
+    //   ..addStatusListener((status) {
+    //     if (status == AnimationStatus.completed) {
+    //       Future.delayed(
+    //         widget.delay,
+    //         () {
+    //           if (mounted) {
+    //             _animationController
+    //               ..reset()
+    //               ..forward(from: 0);
+    //           }
+    //         },
+    //       );
+    //     }
+    //   })
+    //   ..forward(from: 0);
     super.initState();
   }
 
