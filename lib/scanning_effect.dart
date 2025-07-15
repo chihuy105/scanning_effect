@@ -50,8 +50,8 @@ class ScanningEffect extends StatefulWidget {
     this.duration = const Duration(milliseconds: 2800),
     this.scanningLinePadding =
         const EdgeInsets.symmetric(horizontal: 32, vertical: 36),
-    this.reverse = false,
     this.borderLineStrokeWidth = 4.0,
+    this.isGoingUpDown = true,
   });
 
   /// The widget below this widget in the tree.
@@ -80,8 +80,8 @@ class ScanningEffect extends StatefulWidget {
   /// Whether to display the border line
   final bool enableBorder;
 
-  /// Whether to reverse the animation
-  final bool reverse;
+  /// Whether the scanning animation is going down
+  final bool isGoingUpDown;
 
   /// The width of the border line
   final double borderLineStrokeWidth;
@@ -96,27 +96,34 @@ class _ScanningEffectState extends State<ScanningEffect>
 
   @override
   void initState() {
-    _animationController = AnimationController(
-      duration: widget.duration,
-      vsync: this,
-    )..repeat(reverse: true);
+    if (widget.isGoingUpDown) {
+      _animationController = AnimationController(
+        duration: widget.duration,
+        vsync: this,
+      )..repeat(reverse: true);
+    } else {
+      _animationController = AnimationController(
+        duration: widget.duration,
+        vsync: this,
+      );
 
-    // _animationController
-    //   ..addStatusListener((status) {
-    //     if (status == AnimationStatus.completed) {
-    //       Future.delayed(
-    //         widget.delay,
-    //         () {
-    //           if (mounted) {
-    //             _animationController
-    //               ..reset()
-    //               ..forward(from: 0);
-    //           }
-    //         },
-    //       );
-    //     }
-    //   })
-    //   ..forward(from: 0);
+      _animationController
+        ..addStatusListener((status) {
+          if (status == AnimationStatus.completed) {
+            Future.delayed(
+              widget.delay,
+              () {
+                if (mounted) {
+                  _animationController
+                    ..reset()
+                    ..forward(from: 0);
+                }
+              },
+            );
+          }
+        })
+        ..forward(from: 0);
+    }
     super.initState();
   }
 
@@ -140,7 +147,7 @@ class _ScanningEffectState extends State<ScanningEffect>
               animation: _animationController,
               scanningColor: widget.scanningColor,
               scanningHeightOffset: widget.scanningHeightOffset,
-              reversed: widget.reverse,
+              isGoingUpDown: widget.isGoingUpDown,
             ),
           ),
         ),

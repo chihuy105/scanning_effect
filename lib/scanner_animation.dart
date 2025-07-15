@@ -8,14 +8,14 @@ class ScannerAnimation extends AnimatedWidget {
     required Animation<double> animation,
     this.scanningColor = Colors.blue,
     this.scanningHeightOffset = 0.4,
-    this.reversed = false,
+    this.isGoingUpDown = false,
   }) : super(
           listenable: animation,
         );
 
   final Color? scanningColor;
   final double scanningHeightOffset;
-  final bool reversed;
+  final bool isGoingUpDown;
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +24,32 @@ class ScannerAnimation extends AnimatedWidget {
         final scanningGradientHeight =
             constrains.maxHeight * scanningHeightOffset;
         final animation = listenable as Animation<double>;
-        final value = reversed ? 1.0 - animation.value : animation.value;
+        final value = isGoingUpDown ? 1.0 - animation.value : animation.value;
         final scorePosition =
             (value * constrains.maxHeight * 2) - (constrains.maxHeight);
 
-        bool isGoingDown = animation.status != AnimationStatus.reverse;
-
         final color = scanningColor ?? Colors.blue;
 
+        final isAnimationGoingDown = checkGoingUpDown(animation: animation);
+        var begin =
+            isAnimationGoingDown ? Alignment.topCenter : Alignment.bottomCenter;
+        var end =
+            isAnimationGoingDown ? Alignment.bottomCenter : Alignment.topCenter;
+        var colors = isAnimationGoingDown
+            ? [
+                color.withValues(alpha: 0.05),
+                color.withValues(alpha: 0.1),
+                color.withValues(alpha: 0.4),
+                color,
+                color,
+              ]
+            : [
+                color.withValues(alpha: 0.02),
+                color.withValues(alpha: 0.1),
+                color.withValues(alpha: 0.4),
+                color.withValues(alpha: 0.4),
+                color,
+              ];
         return Stack(
           children: [
             Container(
@@ -39,12 +57,8 @@ class ScannerAnimation extends AnimatedWidget {
               transform: Matrix4.translationValues(0, scorePosition, 0),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  begin: isGoingDown
-                      ? Alignment.topCenter
-                      : Alignment.bottomCenter,
-                  end: isGoingDown
-                      ? Alignment.bottomCenter
-                      : Alignment.topCenter,
+                  begin: begin,
+                  end: end,
                   stops: const [
                     0.0,
                     0.2,
@@ -52,13 +66,7 @@ class ScannerAnimation extends AnimatedWidget {
                     0.95,
                     1,
                   ],
-                  colors: [
-                    color.withValues(alpha: 0.02),
-                    color.withValues(alpha: 0.1),
-                    color.withValues(alpha: 0.4),
-                    color.withValues(alpha: 0.4),
-                    color,
-                  ],
+                  colors: colors,
                 ),
               ),
             ),
@@ -67,4 +75,9 @@ class ScannerAnimation extends AnimatedWidget {
       },
     );
   }
+
+  bool checkGoingUpDown({
+    Animation<double> animation = const AlwaysStoppedAnimation(0.0),
+  }) =>
+      isGoingUpDown && animation.status != AnimationStatus.reverse;
 }

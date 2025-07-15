@@ -1,3 +1,6 @@
+## [1.0.10]
+
+- Update animation going back to the start
 ## [1.0.9]
 
 - Add stroke width
