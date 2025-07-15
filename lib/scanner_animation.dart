@@ -28,6 +28,8 @@ class ScannerAnimation extends AnimatedWidget {
         final scorePosition =
             (value * constrains.maxHeight * 2) - (constrains.maxHeight);
 
+        bool isGoingDown = animation.status != AnimationStatus.reverse;
+
         final color = scanningColor ?? Colors.blue;
 
         return Stack(
@@ -37,9 +39,12 @@ class ScannerAnimation extends AnimatedWidget {
               transform: Matrix4.translationValues(0, scorePosition, 0),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  begin:
-                      reversed ? Alignment.bottomCenter : Alignment.topCenter,
-                  end: reversed ? Alignment.topCenter : Alignment.bottomCenter,
+                  begin: isGoingDown
+                      ? Alignment.topCenter
+                      : Alignment.bottomCenter,
+                  end: isGoingDown
+                      ? Alignment.bottomCenter
+                      : Alignment.topCenter,
                   stops: const [
                     0.0,
                     0.2,
@@ -48,10 +53,10 @@ class ScannerAnimation extends AnimatedWidget {
                     1,
                   ],
                   colors: [
-                    color.withValues(alpha: 0.05),
+                    color.withValues(alpha: 0.02),
                     color.withValues(alpha: 0.1),
                     color.withValues(alpha: 0.4),
-                    color,
+                    color.withValues(alpha: 0.4),
                     color,
                   ],
                 ),
