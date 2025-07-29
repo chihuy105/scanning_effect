@@ -37,17 +37,17 @@ class ScannerAnimation extends AnimatedWidget {
             isAnimationGoingDown ? Alignment.bottomCenter : Alignment.topCenter;
         var colors = isAnimationGoingDown
             ? [
-                color.withValues(alpha: 0.05),
-                color.withValues(alpha: 0.1),
-                color.withValues(alpha: 0.4),
+                color.withOpacity(0.05),
+                color.withOpacity(0.1),
+                color.withOpacity(0.4),
                 color,
                 color,
               ]
             : [
-                color.withValues(alpha: 0.02),
-                color.withValues(alpha: 0.1),
-                color.withValues(alpha: 0.4),
-                color.withValues(alpha: 0.4),
+                color.withOpacity(0.02),
+                color.withOpacity(0.1),
+                color.withOpacity(0.4),
+                color.withOpacity(0.4),
                 color,
               ];
         return Stack(
