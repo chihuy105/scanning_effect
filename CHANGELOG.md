@@ -1,3 +1,7 @@
+## [1.0.11]
+
+- Fix withOpacity not working
+
 ## [1.0.10]
 
 - Update animation going back to the start

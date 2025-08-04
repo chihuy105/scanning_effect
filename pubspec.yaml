@@ -1,7 +1,7 @@
 name: scanning_effect
 description: Scanning effect for wrapping around a camera view with customizable borders using CustomPainter.
 
-version: 1.0.10
+version: 1.0.11
 homepage: https://github.com/chihuy105/scanning_effect
 #publish_to: https://github.com/chihuy105/scanning_effect
 
